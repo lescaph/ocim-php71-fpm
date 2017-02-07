@@ -23,6 +23,7 @@ RUN \
   git config --global url."https://".insteadOf git:// && \
 
 # Configure suryb sources
+  mkdir -p /run/php && \
   wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg && \
   echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list && \
   apt-get update && \
