@@ -47,15 +47,15 @@ RUN \
                # php7.0-dev && \
 
 # INSTALL NODEJS NPM BOWER GULP
-    curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get install -y nodejs && \
     npm install -g npm && \
     npm install -g bower && \
     npm install -g gulp && \
 
 # INSTALL WKHTMLTOPDF
-    wget http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
-    tar xf wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
+    wget https://downloads.wkhtmltopdf.org/0.12/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
+    tar xf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
     cp wkhtmltox/bin/wkhtmltopdf /usr/local/bin/ && \
 
 # INSTALL COMPOSER
