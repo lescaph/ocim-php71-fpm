@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER Antoine Marchand <antoine@svilupo.fr>
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -9,6 +9,7 @@ WORKDIR /tmp
 RUN \
   apt-get update && \
   apt-get -y install wget \
+                gnupg \
                 curl \
                 apt-utils \
                 ssmtp \
@@ -42,7 +43,9 @@ RUN \
                 php7.1-xdebug \
                 php7.1-mbstring \
                 php7.1-ldap \
+                php7.1-soap \
                 php7.1-zip \
+                php7.1-apcu \
                 php7.1-xml && \
                # php7.0-dev && \
 
