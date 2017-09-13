@@ -57,7 +57,7 @@ RUN \
     npm install -g gulp && \
 
 # INSTALL WKHTMLTOPDF
-    wget https://downloads.wkhtmltopdf.org/0.12/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
+    wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
     tar xf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
     cp wkhtmltox/bin/wkhtmltopdf /usr/local/bin/ && \
 
