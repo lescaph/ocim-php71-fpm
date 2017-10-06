@@ -1,5 +1,5 @@
 FROM debian:stretch
-MAINTAINER Antoine Marchand <antoine@svilupo.fr>
+LABEL maintainer="Antoine Marchand <antoine@svilupo.fr>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -55,11 +55,6 @@ RUN \
     npm install -g npm && \
     npm install -g bower && \
     npm install -g gulp && \
-
-# INSTALL WKHTMLTOPDF
-    wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
-    tar xf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz && \
-    cp wkhtmltox/bin/wkhtmltopdf /usr/local/bin/ && \
 
 # INSTALL COMPOSER
     php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php && \
