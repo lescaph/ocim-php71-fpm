@@ -69,7 +69,7 @@ RUN \
 # CONFIGURE PHP
     #mkdir "/run/php" && \
     sed -i -e "s/;daemonize = yes/daemonize = no/g" /etc/php/7.1/fpm/php-fpm.conf && \
-    sed -i "s/listen = \/run\/php\/php7.1-fpm.sock/listen = 0.0.0.0:9002/g" /etc/php/7.1/fpm/pool.d/www.conf && \
+    sed -i "s/listen = \/run\/php\/php7.1-fpm.sock/listen = 0.0.0.0:9000/g" /etc/php/7.1/fpm/pool.d/www.conf && \
     sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/"                  /etc/php/7.1/fpm/php.ini && \
     sed -i "s/;date.timezone =.*/date.timezone = Europe\/Paris/"        /etc/php/7.1/fpm/php.ini 
 
@@ -77,6 +77,6 @@ COPY docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-EXPOSE 9002
+EXPOSE 9000
 
 CMD ["php-fpm7.1", "-F"]
