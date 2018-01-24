@@ -50,7 +50,7 @@ RUN \
                # php7.0-dev && \
 
 # INSTALL NODEJS NPM BOWER GULP
-    curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_9.x | bash - && \
     apt-get install -y nodejs && \
     npm install -g npm && \
     npm install -g bower && \
